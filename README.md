@@ -1,4 +1,4 @@
-#Clyp (Clyp-Unofficial) Mobile App Rewrite
+# Clyp (Clyp-Unofficial) Mobile App Rewrite
 
 This is a reqrite of the Clyp, Inc. mobile application for Android and iOS.
 
@@ -8,7 +8,7 @@ I got as far as implementing a simple API request and doing a bit of UI work bef
 
 Yes, Jordan, when your mobile apps don't even have deep linking working properly, you aren't going to have traffic when people don't directly access the site's homepage unless they are uploading. Congrats. 
 
-Currently, any use of this API is *unlicenced.* I haven't requested API access. Seeing as I'm no longer affiliated with Clyp, Inc. I can't bypass this. I have a feeling my API request will be rejected anyway. 
+Currently, any use of this API is **unlicenced.** I haven't requested API access. Seeing as I'm no longer affiliated with Clyp, Inc. I can't bypass this. I have a feeling my API request will be rejected anyway. 
 
 Funny how the API request button and Google Form appeared either soon before or soon after my severence.
 
