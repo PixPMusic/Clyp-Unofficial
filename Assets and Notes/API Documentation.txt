@@ -1,0 +1,52 @@
+How to read this
+if there's a / on the end of the line, and the item below it doesn't have a /, this is accesable as JSON
+If there IS a / on the sub-item, that is a url, and it should have JSON objects under it.
+I'm looking for a better structure for this.
+
+api.clyp.it/
+	[id]/
+		Status
+			String. Appears to be a nice way to check if downloads are enabled or not. Probably only applies to premium users.
+		CommentsEnabled
+			Boolean. Exactly what it sounds like.
+		Category
+			String. I don't even know how to set these
+		AudioFileId
+			String. I don't know why this is even here. It's identical to the Clyp ID. It might matter for premium users with custom urls?
+		Title
+			String. Title
+		Description
+			String. Description
+		Duration
+			Float. File length in s.ms 
+		Url
+			String. Url for Clyp page (use for sharing externally)
+		soundwave
+			depricated. Use soundwave.clyp.it/[id]
+		Mp3Url
+			String. Url pointing to audio.clyp.it/[id].mp3?args
+		SecureMp3Url
+			String. identical to mp3url. One or the other might be depreicated eventually
+		OggUrl
+			String. Url pointing to audio.clyp.it/[id].ogg?args
+		SecureOggUrl
+			String. identical to oggurl. One or the other might be depricated eventually
+		DateCreated
+			String. Date/Time created. Format: yyyy-mm-ddThh-mm-ss.fffZ
+		comments/
+	comment/
+		[CommentId]
+			Comment
+				User
+				
+		
+soundwave.clyp.it
+	[id]
+		returns a JSON array with int values. I don't know the maximum, but I believe it might be either 99/100 or 127/128
+		I also don't know if the data is scaled on the site so the max value in the set is scaled to the maximum height, or if it's a static scaled
+		This was one of the last things I asked Jordan before I was fired
+
+Notes on Proprietary Information
+Nothing in this document is unavailable to the general public.
+This can either be sniffed via the website, or in the official API docs.
+Yes, the deprication information is private, but it is beneficial to the bandwidth usage for Clyp, Inc.
