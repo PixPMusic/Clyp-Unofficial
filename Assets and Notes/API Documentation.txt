@@ -3,6 +3,8 @@ if there's a / on the end of the line, and the item below it doesn't have a /, t
 If there IS a / on the sub-item, that is a url, and it should have JSON objects under it.
 I'm looking for a better structure for this.
 
+Weird little note - It seems the report api is still there, but probably depricated. Report was a POST api that allowed you to report copyright or offensive content, but the site no longer has it, so why bother
+
 api.clyp.it/
 	[id]/
 		Status
