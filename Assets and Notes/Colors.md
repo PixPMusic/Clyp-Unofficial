@@ -1,7 +1,5 @@
 # Colors
 
-It should be noted that, while I lifted these from an internal PDF, they're identical to the values used on the public facing website. 
-
 ## Primary
 Name | Hex
 ---------|----------
