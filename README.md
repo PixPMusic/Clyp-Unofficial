@@ -1,12 +1,16 @@
 # Clyp (Clyp-Unofficial) Mobile App Rewrite
 
-This is a reqrite of the Clyp, Inc. mobile application for Android and iOS.
+This is, or eventually will be, a rewrite of the Clyp, Inc. mobile application for Android and iOS, and hopefully Windows Phone 10, and possibly Windows 10, if the demand is there.
+
+-----------------
 
 Up until 2017-03-20 I was the Android developer for Clyp. Just before severence, I decided to go against what the CEO had direted and started rewriting the codebase for the mobile app fresh. I also decided that I wanted something that worked on Windows and Windows Phone 10. My choice to use Xamarin was almost set in stone (Plus I wanted to play with Xamarin).
 
 I got as far as implementing a simple API request and doing a bit of UI work before Jordan gave me the bad news that he no longer needed me, and was "pulling the Android app." Status of the iOS app is unknown, other than "it isn't recieving updates" as "99% of our traffic is via the web."
 
-Yes, Jordan, when your mobile apps don't even have deep linking working properly, you aren't going to have traffic when people don't directly access the site's homepage unless they are uploading. Congrats. 
+Yes, Jordan, when your mobile apps don't even have deep linking working properly, you aren't going to have traffic when people don't directly access the site's homepage unless they are uploading. Congrats.
+
+-------------------
 
 Currently, any use of this API is **unlicenced.** I haven't requested API access. Seeing as I'm no longer affiliated with Clyp, Inc. I can't bypass this. I have a feeling my API request will be rejected anyway. 
 
