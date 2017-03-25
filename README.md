@@ -1,4 +1,4 @@
-# Clyp (Clyp-Unofficial) Mobile App Rewrite
+# Clyp (Unofficial) Mobile App Rewrite
 
 This is, or eventually will be, a rewrite of the Clyp, Inc. mobile application for Android and iOS, and hopefully Windows Phone 10, and possibly Windows 10, if the demand is there.
 
