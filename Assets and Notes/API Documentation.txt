@@ -40,7 +40,80 @@ api.clyp.it/
 		[CommentId]
 			Comment
 				User
-				
+	user/
+		[UserId]/
+			Biography
+				String. Profile description.
+			Website
+				String. URL provided by user. Expected to be external.
+			Counts
+				Following
+					Int. Number of people user is following.
+				Followers
+					Int. Number of people following user.
+				Uploads
+					Int. Upload count.
+			FirstName
+				String. User's display name.
+			UserId
+				String. Unique ID for user.
+			ProfilePictureUrl
+				String. CDN URL for the profile picture.
+			PublicProfileUrl
+				String. URL for user profile. Useful for sharing externally.
+			uploads/
+				Data
+					Array of Clyp objects identical to a standard api/[id]/ call
+			followerrelationships/
+				Data
+					Array of max-10 user objects structured as follows
+						User
+							FirstName
+								String. User display name
+							UserId
+								String. Unique user id.
+							ProfilePictureUrl
+								String. CDN URL for profile picture.
+							PublicProfileUrl
+								String. URL for user profile. Userful for sharing externally.
+						Outgoing
+							Status
+								String. Unknown. Default appears to be "None"
+						Incoming
+							Status
+								String. Unknown. Default appears to be "None"
+				TotalCount
+					Int. Number of people following user.
+				Paging
+					Previous
+						String. Url for API call for the previous max-10 followers
+					Next
+						String. Url for API call for the next max-10 followers		
+			followingrelationships/
+				Data
+					Array of max-10 user objects structured as follows
+						User
+							FirstName
+								String. User display name
+							UserId
+								String. Unique user id.
+							ProfilePictureUrl
+								String. CDN URL for profile picture.
+							PublicProfileUrl
+								String. URL for user profile. Userful for sharing externally.
+						Outgoing
+							Status
+								String. Unknown. Default appears to be "None"
+						Incoming
+							Status
+								String. Unknown. Default appears to be "None"
+				TotalCount
+					Int. Number of people user is following.
+				Paging
+					Previous
+						String. Url for API call for the previous max-10 users
+					Next
+						String. Url for API call for the next max-10 users
 		
 soundwave.clyp.it
 	[id]
