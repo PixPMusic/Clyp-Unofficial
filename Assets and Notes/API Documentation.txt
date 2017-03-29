@@ -36,10 +36,63 @@ api.clyp.it/
 		DateCreated
 			String. Date/Time created. Format: yyyy-mm-ddThh-mm-ss.fffZ
 		comments/
+			Data
+				Array of Comment objects as follows. Empty if TotalCount = 0
+				Comment
+					User
+						FirstName
+							String. User's display name.
+						LastName
+							String. Optional. Second half of user's display name. Sometimes not there.
+						UserId
+							String. Unique ID for user.
+						ProfilePictureUrl
+							String. CDN URL for the profile picture.
+						PublicProfileUrl
+							String. URL for user profile. Useful for sharing externally.
+					CommentId
+						String. Unique ID for comment.
+					DateCreated
+						String. Date/Time created. Format: yyyy-mm-ddThh-mm-ss.fffZ
+					Content
+						String. Body of the comment.
+					IsEdited
+						Boolean. True iif the comment has been edited, false otherwise.
+					Replies
+						Array of Comment objects in the same structure as the root comment, only without this array. Not pagated. No count provided.
+			TotalCount
+				Int. Number of root comments
+			Paging
+				Empty if TotalCount < 10
+				Previous
+					String. Url for API call for the previous max-10 root comments. 
+				Next
+					String. Url for API call for the next max-10 root comments		
 	comment/
 		[CommentId]
 			Comment
+				Almost identical to api/[id]/comments Data{Comment} but the Replies array is outside of the comment itsself rather than an object of the Comment array
 				User
+					FirstName
+						String. User's display name.
+					LastName
+						String. Optional. Second half of user's display name. Sometimes not there.
+					UserId
+						String. Unique ID for user.
+					ProfilePictureUrl
+						String. CDN URL for the profile picture.
+					PublicProfileUrl
+						String. URL for user profile. Useful for sharing externally.
+				CommentId
+					String. Unique ID for comment.
+				DateCreated
+					String. Date/Time created. Format: yyyy-mm-ddThh-mm-ss.fffZ
+				Content
+					String. Body of the comment.
+				IsEdited
+					Boolean. True iif the comment has been edited, false otherwise.
+			Replies
+				Array of Comment objects in the same structure as the root comment. No count provided. Not pageagted.
 	user/
 		[UserId]/
 			Biography
@@ -54,7 +107,9 @@ api.clyp.it/
 				Uploads
 					Int. Upload count.
 			FirstName
-				String. User's display name.
+				String. Optional. User's display name. Not there if blank.
+			LastName
+				String. Optional. Second half of user's display name. Not there if blank.
 			UserId
 				String. Unique ID for user.
 			ProfilePictureUrl
@@ -66,10 +121,12 @@ api.clyp.it/
 					Array of Clyp objects identical to a standard api/[id]/ call
 			followerrelationships/
 				Data
-					Array of max-10 user objects structured as follows
+					Array of max-10 user objects structured as follows. Empty if TotalCount = 0
 						User
 							FirstName
-								String. User display name
+								String. Optional. User display name. Not there if blank.
+							LastName
+								String. Optional. Second half of user's display name. Not there if blank.
 							UserId
 								String. Unique user id.
 							ProfilePictureUrl
@@ -85,16 +142,19 @@ api.clyp.it/
 				TotalCount
 					Int. Number of people following user.
 				Paging
+					Empty if TotalCount < 10
 					Previous
 						String. Url for API call for the previous max-10 followers
 					Next
 						String. Url for API call for the next max-10 followers		
 			followingrelationships/
 				Data
-					Array of max-10 user objects structured as follows
+					Array of max-10 user objects structured as follows. Empty if TotalCount = 0
 						User
 							FirstName
-								String. User display name
+								String. Optional. User display name. Not there if blank.
+							LastName
+								String. Optional. Second half of user's display name. Not there if blank.
 							UserId
 								String. Unique user id.
 							ProfilePictureUrl
@@ -110,6 +170,7 @@ api.clyp.it/
 				TotalCount
 					Int. Number of people user is following.
 				Paging
+					Empty if TotalCount < 10
 					Previous
 						String. Url for API call for the previous max-10 users
 					Next
