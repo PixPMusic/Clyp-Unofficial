@@ -6,6 +6,8 @@ I'm looking for a better structure for this.
 Weird little note - It seems the report api is still there, but probably depricated. Report was a POST api that allowed you to report copyright or offensive content, but the site no longer has it, so why bother
 
 api.clyp.it/
+	v2/
+		IT WOULD SEEM THERE'S A NEW API THAT I NEED TO POKE AND PROD AND FIGURE OUT.
 	[id]/
 		Status
 			String. Appears to be a nice way to check if downloads are enabled or not. Probably only applies to premium users.
