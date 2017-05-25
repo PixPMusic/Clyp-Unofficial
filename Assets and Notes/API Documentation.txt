@@ -25,6 +25,8 @@ api.clyp.it/
 			Float. File length in s.ms 
 		Url
 			String. Url for Clyp page (use for sharing externally)
+		ArtworkPictureUrl
+			String. Optional. Url on static.clyp.it linking to a jpg image optionally uploaded by a user. The filename is not reflective of the [id]
 		soundwave
 			depricated. Use soundwave.clyp.it/[id]
 		Mp3Url
@@ -43,7 +45,7 @@ api.clyp.it/
 				Comment
 					User
 						FirstName
-							String. User's display name.
+							String. Optional. User's display name. Sometimes not there.
 						LastName
 							String. Optional. Second half of user's display name. Sometimes not there.
 						UserId
