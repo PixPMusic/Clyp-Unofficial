@@ -71,7 +71,65 @@ api.clyp.it/
 				Previous
 					String. Url for API call for the previous max-10 root comments. 
 				Next
-					String. Url for API call for the next max-10 root comments		
+					String. Url for API call for the next max-10 root comments
+		playlist/
+			It would appear that every Clyp has a unique playlist to go with it. This is how plays are tracked. Seeing as 
+			the Playlist api is all but depricated, this is a good reuse of code, but very unintuitive for anyone 
+			researching the API,
+			PlaylistId
+				String. Unique ID for the playlist. Different than the Clyp's own [id]
+			AudioFiles
+				Array of objects containing the following:
+					ListenCount
+						Int. Number of plays the specific audio file has.
+					CommentCount
+						Int. Number of comments the specific audio file has
+					Status
+						String. Flag containing DownloadDisabled or DownloadEnabled
+					CommentsEnabled
+						Boolean. True if comments are enabled
+					Category
+						String. First tag?
+					User
+						FirstName
+							String. Optional. First half of name. Might not exist.
+						LastName
+							String. Optional. Last half of name. Might not exist.
+						UserId
+							String. Unique Id for each user
+						ProfilePictureUrl
+							String. CDN url for profile image. Might change from Amazon S3 to static.clyp.it
+						PublicProfileUrl
+							String. Profile URL in the format of https://clyp.it/user/[UserId]
+					AudioFileId
+						String. Unique Id for Clyp
+					Title
+						String. Title
+					Description
+						String. Description
+					Duration
+						Float. File length in s.ms 
+					Url
+						String. Url for Clyp page (use for sharing externally)
+					Mp3Url
+						String. Url pointing to audio.clyp.it/[id].mp3?args
+					SecureMp3Url
+						String. identical to mp3url. One or the other might be depreicated eventually
+					OggUrl
+						String. Url pointing to audio.clyp.it/[id].ogg?args
+					SecureOggUrl
+						String. identical to oggurl. One or the other might be depricated eventually
+					DateCreated
+						String. Date/Time created. Format: yyyy-mm-ddThh-mm-ss.fffZ
+		OutgoingUserRelationship
+			Status
+				String. Known values: "None" Use? Unknown
+		Modifiable
+			Boolean. I would imagine this has to do with submitting an OAuth token with your request to authenticate a Playlist's edit rights. Playlists at this endpoit likely aren't editable
+		ContentAdministrator
+			Boolean. I would imagine this has to do with submitting an OAuth token with your request to authenticate a Playlist's edit rights. Playlists at this endpoit likely aren't editable
+		FeatureSubmissionEligibility
+			String. Known values: "Ineligible" Reason for ineligability? Unknown
 	comment/
 		[CommentId]
 			Comment
