@@ -1,4 +1,4 @@
-# Clyp (Unofficial) Mobile App Rewrite
+# Clyp has officially shut down the standard use service and this repository and all my notes are essentially useless
 
 This is, or eventually will be, a rewrite of the Clyp, Inc. mobile application for Android and iOS, and hopefully Windows Phone 10, and possibly Windows 10, if the demand is there.
 
